@@ -4,13 +4,17 @@ import os
 from PIL import Image
 import json
 import math
+import yaml
 from os.path import join
+import io
 
 # A lot of times the photo will be cropped such that it no longer conforms to a 4:3 or 16:9 standard. That's one way.
 # DVD producers can also choose to show even wider ratios such as 1.85:1 and 2.39:1[1] within the 16:9 DVD frame by hard matting or adding black bars within the image itself.
 
 
 class PythonPhotoResolutionComparison():
+    RESOLUTIONS_FILE = 'resolutions.yaml'
+    RESOLUTIONS = yaml.load(open(RESOLUTIONS_FILE, 'r'))
 
     def __init__(self, file_path):
         self._file_path = file_path
@@ -22,6 +26,13 @@ class PythonPhotoResolutionComparison():
     @property
     def json(self):
         return json.dumps(self._json_data)
+
+    def print_json(self, string_keys=None):
+        keys = string_keys.split(',')
+        output = self._json_data
+        if keys:
+            output = {key: output[key] for key in keys}
+        print(output)
 
     def _recursive_gcd(self, a, b):
         if b == 0:
@@ -47,11 +58,19 @@ class PythonPhotoResolutionComparison():
 
         return exact, formatted, normalised
 
+    def _get_resolution_data(self, aspect_ratio):
+        if aspect_ratio in PythonPhotoResolutionComparison.RESOLUTIONS:
+            return PythonPhotoResolutionComparison.RESOLUTIONS[aspect_ratio]
+        return PythonPhotoResolutionComparison.RESOLUTIONS['default']
+
     def execute(self):
         self._image = Image.open(self._file_path)
         width, height = self._image.size
         aspect_ratio = self._get_aspect_ratio(width, height)
         exactpixels, megapixel, normalised = self._get_megapixel(width, height)
+
+        resolution = self._get_resolution_data(aspect_ratio)
+        self._json_data.update(resolution)
 
         self._json_data['normalised_mega_pixels'] = normalised
         self._json_data['exact_pixels'] = exactpixels
@@ -59,13 +78,6 @@ class PythonPhotoResolutionComparison():
         self._json_data['aspect_ratio'] = aspect_ratio
         self._json_data['width'] = width
         self._json_data['height'] = height
-
-
-        # self._json_data['is_hdv_aspect_ratio'] = height
-        # self._json_data['is_square_ratio'] = height
-        # self._json_data['is_tv_or_classic_pc_ratio'] = height
-        # self._json_data['is_hd_video_or_us_tv'] = height
-
 
 
 if __name__ == "__main__":
@@ -83,6 +95,8 @@ if __name__ == "__main__":
             extractor = PythonPhotoResolutionComparison(file_path)
             extractor.execute()
             print(extractor.json)
+            # extractor.print_json('aspect_ratio')
+
 
 
 

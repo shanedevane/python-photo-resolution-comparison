@@ -1,0 +1,226 @@
+# Ratio
+'default':
+  ratio: "n/a"
+  description: "not found"
+'1:1':
+  ratio: "1:1"
+  description: "square ratio, common format for newer social network apps"
+'16:9':
+  ratio: "16:9"
+  description: "HD video std.; U.S. digital broadcast TV std."
+'1.77:1':
+  ratio: "16:9"
+  description: "HD video std.; U.S. digital broadcast TV std."
+'1.78:1':
+  ratio: "16:9"
+  description: "HD video std.; U.S. digital broadcast TV std."
+
+
+# Megapixel
+
+
+
+#
+#
+## ResolutionToMegapixel
+#320x240:n/a
+#640x480:
+#- 640
+#- 480
+#- 0.3 Megapixel
+#800x600:
+#- 800
+#- 600
+#- n/a
+#1024x768:
+#
+#
+#
+#Excellent
+#
+#Photo Quality
+#
+#Excellent
+#
+#Good
+#
+#Acceptable
+#
+#Poor
+#
+#Poor
+#
+#Poor
+#
+#1280x960 - 1 Megapixel
+#Excellent
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Very Good
+#
+#Good
+#
+#Poor
+#
+#Poor
+#
+#Poor
+#
+#1536x1180
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Excellent
+#
+#Very Good
+#
+#Acceptable
+#
+#poor
+#
+#poor
+#
+#1600x1200 - 2 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Very Good
+#
+#Acceptable
+#
+#Acceptable
+#
+#Poor
+#
+#2048x1536 - 3 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Excellent
+#
+#Good
+#
+#Acceptable
+#
+#Acceptable
+#
+#2240x1680 - 4 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Very Good
+#
+#Good
+#
+#Acceptable
+#
+#2560x1920 - 5 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Excellent
+#
+#Very Good
+#
+#Very Good
+#
+#3032x2008 - 6 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Excellent
+#
+#Very Good
+#
+#3072x2304 - 7 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Excellent
+#
+#Excellent
+#
+#3264x2448 - 8 Megapixel
+#Excellent**
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Photo Quality
+#
+#Excellent
+#
+#10 Megapixel +
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#Some common aspect ratios include 1.375:1, which is the Academy film standard, 1.43:1, which is the IMAX film aspect ratio, and 1.6180:1 which is the golden video aspect ratio.
+#
